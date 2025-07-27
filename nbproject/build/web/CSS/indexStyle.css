@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* -webkit-box-sizing: border-box;
+          box-sizing: border-box; */
+}
+
+body {
+  background-color: #ffffff;
+}
+
+/* header */
+.headings {
+  /* font-size: 5rem; */
+  color: #ffffff;
+}
+
+.no-line {
+  text-decoration: none;
+}
+
+/* title bar */
+.title-container {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background-color: #0069b4;
+  height: 6em;
+  padding: 10px;
+}
+
+.title-container-items {
+  margin: 1.5rem;
+  background-color: #0069b4;
+}
+
+.but:hover {
+  color: #ffffff;
+  background-color: #0069b4;
+}
+
+.logo-title,
+.logo-title:visited {
+  color: #DDEFE3;
+  text-align: center;
+  text-decoration: none;
+  display: inline;
+}
+
+.dnt-but {
+  background-color: red;
+  color: #fbfcfc;
+  padding-inline: 1.5vw;
+  padding-block: 1vw;
+  font-size: 2vw;
+  border: none;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 1.2vw;
+}
+
+/* main */
+
+#about head {
+  height: 500px;
+  background-color: #000;
+}
+
+/* Slider-Top */
+.floating-button {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.slide-transition {
+  transition: transform 0.5s ease;
+}
+
+/* Description */
+.heading-container {
+  font-size: 1.8em;
+  font-family: "Roboto Slab";
+  font-weight: 700;
+  color: #DDEFE3;
+  text-decoration: underline;
+  position: relative;
+}
+
+.heading-container::before,
+.heading-container::after {
+  vertical-align: middle;
+  display: inline-block;
+  content: url(Images/A4\ Page.png);
+}
+
+.heading-container::after {
+  transform: scaleX(-1);
+}
+
+.Description {
+  font-family: "Roboto Slab";
+  font-size: 1.5em;
+  text-align: justify;
+  margin-inline: 7vw;
+  margin-block: 5vw;
+  word-wrap: break-word;
+  /* Allow words to break onto the next line */
+  overflow-wrap: break-word;
+  /* Break words at the end of the line if necessary */
+}
+
+.description-heading {
+  background-color: #0069b4;
+  color: #ffffff;
+  text-align: center;
+  padding-block: 2vw;
+  font-size: 3em;
+  font-weight: 700;
+}
+
+/* Sliding Cards */
+
+img {
+  width: 100%;
+  transition: transform 1s;
+
+}
+
+.con {
+  display: grid;
+  place-items: center;
+  height: fit-content;
+  margin: auto;
+  width: 90%;
+  overflow: hidden;
+  margin-block: 3vw;
+}
+
+.slide-container {
+  display: flex;
+  width: calc(250px * 18);
+  animation: scroll 50s linear infinite;
+
+}
+
+.slide-container img {
+  height: 150px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+
+  }
+
+  100% {
+    transform: translateX(calc(-250px * 9));
+  }
+}
+
+.slide-image {
+  height: fit-content;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  padding-inline: 15px;
+  perspective: 100px;
+  background-size: cover;
+
+
+}
+
+img:hover {
+  transform: translateZ(20px);
+}
+
+/* Cards */
+
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 80rem;
+}
+
+.cols {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.col {
+  width: calc(25% - 2rem);
+  margin: 1rem;
+  cursor: pointer;
+
+}
+
+.container {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+
+}
+
+.front,
+.back {
+  background-size: cover;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  background-position: center;
+  -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  text-align: center;
+  min-height: 280px;
+  box-shadow: 0 0 10px solid blue;
+
+  height: auto;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.back {
+  background: #cedce7;
+  background: -webkit-linear-gradient(45deg, #cedce7 0%, #596a72 100%);
+  background: -o-linear-gradient(45deg, #cedce7 0%, #596a72 100%);
+  background: linear-gradient(45deg, #cedce7 0%, #596a72 100%);
+}
+
+.front:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  content: '';
+  display: block;
+  opacity: .6;
+  background-color: #000;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.container:hover .front,
+.container:hover .back {
+  -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.inner {
+  -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+  transform: translateY(-50%) translateZ(60px) scale(0.94);
+  top: 50%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 1px solid transparent;
+  -webkit-perspective: inherit;
+  perspective: inherit;
+  z-index: 2;
+}
+
+.container .back {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.container .front {
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.container:hover .back {
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.container:hover .front {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.front .inner p {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.front .inner p:after {
+  content: '';
+  width: 4rem;
+  height: 2px;
+  position: absolute;
+  background: #C6D4DF;
+  display: block;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -.75rem;
+}
+
+.front .inner span {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Montserrat';
+  font-weight: 300;
+}
+
+@media screen and (max-width: 64rem) {
+  .col {
+    width: calc(33.333333% - 2rem);
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .col {
+    width: calc(50% - 2rem);
+  }
+}
+
+@media screen and (max-width: 32rem) {
+  .col {
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
+}
+
+/* Sticker for ngo  */
+
+.image-container-sticker {
+  display: grid;
+  padding: 10px;
+  margin-block: 2vw;
+}
+
+.image-s {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+
+}
+
+.sticker-head {
+  display: flex;
+  height: fit-content;
+  width: 60vw;
+  background-color: #03a9f4;
+  color: white;
+  text-align: center;
+  border-radius: 50px;
+  margin-bottom: 2vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.sticker-head h3 {
+  font-size: 2.8vw;
+  margin: 0;
+}
+
+
+@media (min-width: 600px) {
+  .image-container-sticker {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* 2 columns in a row */
+    gap: 10px;
+    /* Adjust the gap as needed */
+    padding: 10px;
+    margin-left: 140px;
+    margin-right: 140px;
+  }
+}
+
+
+
+
+@media (max-width: 1200px) {
+  .image-container-sticker {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns in a row */
+    gap: 10px;
+    /* Adjust the gap as needed */
+    padding: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/************************* END **************************************************/

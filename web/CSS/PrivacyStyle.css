@@ -1,0 +1,30 @@
+body {
+    /* font-family: Arial, sans-serif; */
+    line-height: 1.6;
+}
+
+.header {
+    background-color: #8aadf9;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    width: 80%;
+    margin-left: 117px;
+    margin-right: 74px;
+    margin-bottom: 67px;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+*{
+    font-family:'times_new_romanregular';
+  }
+  

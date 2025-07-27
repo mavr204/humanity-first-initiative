@@ -1,0 +1,609 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HFI</title>
+        <!-- FONTS LINKS -->
+        <link rel="stylesheet" href="./Fonts/times/stylesheet.css" type="text/css" charset="utf-8" />
+        <link rel="stylesheet" href="./Fonts/cascadia/stylesheet.css" type="text/css" charset="utf-8" />
+        <link rel="stylesheet" href="./Fonts/hormony/stylesheet.css" type="text/css" charset="utf-8" />
+        <link rel="stylesheet" href="./Fonts/Sora/stylesheet.css" type="text/css" charset="utf-8" />
+        <link rel="stylesheet" href="./Fonts/p22 mackinac/stylesheet.css" type="text/css" charset="utf-8" />
+        <link rel="stylesheet" href="./CSS/universalFontStyle.css">
+        <!-- ends of fonts essential links -->
+
+        <!-- Bootsrap import CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <!-- Bootstrap Javascript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+        <!-- Style sheet -->
+        <link rel="stylesheet" href="CSS/indexStyle.css">
+        <link rel="stylesheet" href="CSS/navBarStyle.css">
+        <link rel="stylesheet" href="CSS/popup.css">
+        <link rel="stylesheet" href="CSS/footer.css">
+        <!--FAVICON -->
+        <link rel="icon" href="https://www.logolynx.com/images/logolynx/af/af9677459fff9298be379a290e71434d.jpeg">
+    </head>
+    <% String username=(String)session.getAttribute("username"); %>
+
+        <body>
+            <!-- Header -->
+            <header class="title-bar d-flex justify-content-center align-items-center">
+                <!-- Title-bar -->
+                <div class="container-fluid d-flex justify-content-between align-items-center">
+                    <!-- Logo -->
+                    <div style="padding-left: 1.5vw;">
+                        <a href="Home.jsp"><img title="Home"
+                                src="https://www.logolynx.com/images/logolynx/af/af9677459fff9298be379a290e71434d.jpeg"
+                                alt="Logo" class="title-logo rounded-circle"></a>
+                    </div>
+                    <!-- Title  -->
+                    <div>
+                        <h1><a class="title-link timesF" href="Home.jsp"> HUMANITY FIRST INITIATIVE </a></h1>
+                    </div>
+                    <!-- title button -->
+                    <span><a type="button" href="Logout" id="sign-out"
+                            class="btn btn-outline-light title-btn p22MacF">Sign out</a></span>
+                </div>
+            </header>
+
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg ">
+                <div class="container-fluid">
+                    <a class="navbar-brand timesF" id="n102" href="Profile">Welcome <%=username%>!</a>
+                    <button class="navbar-toggler custom-toggler ham" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav " aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon custom-toggler"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav" id="n101">
+                            <li class="nav-item ">
+                                <a class="nav-link active " aria-current="page" href="Home.jsp">Home</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link p22MacF" href="#scroll">About Us</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link p22MacF" href="Donations">Donations</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link p22MacF" href="./payment.html">Donate Now</a>
+                            </li>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p22MacF" href="./gallery.html">Gallery</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link p22MacF" href="Dashboard">Dashboard</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link p22MacF" href="Profile">Profile</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link p22MacF" href="Donations">Donations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p22MacF" href="./Complain.html">Complaint</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Main -->
+            <main>
+                <!-- Slide-top(Carousel) -->
+                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="Images/women.png" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="Images/child.png" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="Images/health.png" class="d-block w-100">
+                        </div>
+                    </div>
+                    <div class="floating-button">
+                        <a href="./payment.html"><button type="button" class="dnt-but p22MacF">Donate
+                                Now</button></a>
+                    </div>
+                </div>
+
+                <div id="scroll">
+                    <h2 class="harmonymediumF description-heading">About Our Organization</h2>
+
+                    <!-- Back-ground Image -->
+                    <div class="d-block">
+                        <!-- Description -->
+
+                        <p class="Description timesF" id="scroll">
+                            <!--
+                    Here are some of our work: -->
+                            Humanity Fast Initiative <br>
+                            Established in 2002, Humanity Fast Initiative is an Indian
+                            development organization,
+                            impacting the lives of over 15 lakh children
+                            and their families every year. We have more than 400 projects on education,
+                            healthcare, livelihood,
+                            and
+                            women empowerment in
+                            over 2,000 remote villages and urban slums across 25 states of India.
+                            Humanity Fast Initiative works as a catalyst in the cycle of change, complementing
+                            and supplementing
+                            government
+                            efforts
+                            to achieve the Sustainable Development Goals.
+                            Our Founding Story<br><br>
+                            In the annals of philanthropy and social change, every impactful initiative has a
+                            compelling origin
+                            story. Humanity Fast Initiative is no exception. Prince Biswas, a catalyst for change
+                            and a fervent
+                            advocate for humanitarian causes, envisioned an organization that would transcend
+                            boundaries,
+                            leveraging the power of collective action to address the world's most pressing
+                            issues.<br><br>
+                            Prince's journey began with a deep-seated belief in the potential of individuals to
+                            make a
+                            difference. Drawing inspiration from his own experiences and encounters with
+                            communities facing
+                            adversity, he set out to establish an organization that would serve as a beacon of
+                            hope and
+                            empowerment. Thus, Humanity Fast Initiative was born—a testament to Prince's
+                            unwavering commitment
+                            to building a world where compassion fuels sustainable change.<br><br>
+                            Our Co-Founders<br><br>
+                            Behind every visionary leader are individuals whose diverse skills, passion, and
+                            dedication breathe
+                            life into the shared vision. Ayush Chakraborty, Anish Naskar, Suvechya Das, and
+                            Sayonika Ghosh, the
+                            co-founders of Humanity Fast Initiative, bring a rich tapestry of experiences and
+                            expertise to the
+                            table.<br><br>
+                            Ayush Chakraborty, with a background in social entrepreneurship, adds a strategic
+                            and innovative
+                            flair to our endeavors. Anish Naskar, driven by a profound empathy for
+                            marginalized communities,
+                            contributes a wealth of knowledge in community development and grassroots
+                            initiatives. Suvechya Das,
+                            a seasoned advocate for social justice, enriches our team with a deep
+                            understanding of human rights
+                            issues and policy advocacy. Sayonika Ghosh, a passionate advocate for
+                            environmental sustainability,
+                            infuses our initiatives with a green perspective, ensuring that our actions align with
+                            the
+                            well-being of the planet.<br><br>
+                            Together, this dynamic team forms the backbone of Humanity Fast Initiative,
+                            weaving a tapestry of
+                            skills, experiences, and perspectives that harmonize to create a powerful force for
+                            positive
+                            change.<br><br>
+                            Our Mission: A Compassionate Call to Action<br><br>
+                            At the core of Humanity Fast Initiative lies a mission that resonates with the
+                            heartbeat of humanity
+                            itself. Our mission is to catalyze positive change by addressing the multifaceted
+                            challenges faced
+                            by communities around the world. From alleviating poverty and promoting
+                            education to championing
+                            environmental sustainability and advocating for human rights, our initiatives span a
+                            diverse
+                            spectrum, driven by a singular purpose—to empower and uplift.
+                            Alleviating Poverty: A Path to Empowerment<br><br>
+                            Poverty is a pervasive challenge that casts a shadow over the lives of millions.
+                            Humanity Fast
+                            Initiative is dedicated to creating pathways out of poverty, fostering sustainable
+                            livelihoods, and
+                            providing essential resources to those in need. Through strategic partnerships,
+                            community-driven
+                            projects, and innovative solutions, we aim to break the cycle of poverty and pave
+                            the way for
+                            self-sufficiency.<br>
+                            Promoting Education: Illuminating Minds, Igniting Futures<br><br>
+                            Education is the key to unlocking human potential and dismantling barriers to
+                            opportunity. In
+                            alignment with this belief, Humanity Fast Initiative is dedicated to promoting
+                            education as a
+                            fundamental right for all. Our initiatives encompass the establishment of schools,
+                            scholarship
+                            programs, and educational resources that bridge gaps and create a foundation for
+                            lifelong
+                            learning.<br>
+                            Environmental Sustainability: Guardians of the Earth<br><br>
+                            As stewards of the planet, Humanity Fast Initiative recognizes the urgent need to
+                            address
+                            environmental challenges and safeguard the Earth for future generations. Our
+                            environmental
+                            sustainability initiatives focus on promoting eco-friendly practices, conservation
+                            efforts, and
+                            raising awareness about the interconnectedness of environmental health and
+                            human well-being.
+                            <br>
+                            Advocating for Human Rights: Voices for the Voiceless<br><br>
+                            Human rights form the moral compass guiding our work at Humanity Fast Initiative.
+                            We are unwavering
+                            advocates for the inherent dignity and equality of every individual, irrespective of
+                            their
+                            background or circumstances. Our initiatives in this realm encompass awareness
+                            campaigns, legal aid
+                            programs, and advocacy efforts aimed at combating discrimination, injustice, and
+                            human rights
+                            violations.<br>
+                            Transparency and Accountability: Our Guiding Principles<br><br>
+                            In the realm of philanthropy and social impact, transparency and accountability are
+                            non-negotiable
+                            principles that underpin the trust between organizations and their stakeholders.
+                            Humanity Fast
+                            Initiative is committed to the highest standards of transparency in all our activities,
+                            from
+                            financial reporting to the outcomes of our projects.<br>
+                            How You Can Join Us: A Call to Action<br><br>
+                            Humanity Fast Initiative is not just an organization; it's a movement fueled by the
+                            collective power
+                            of individuals who believe in the potential for positive change. If you share our
+                            vision and passion
+                            for making a difference, there are numerous ways you can join us in our
+                            mission:<br>
+                            1. Donate: Your financial support enables us to implement impactful projects, reach
+                            more
+                            communities, and address urgent needs. Every contribution, no matter the size,
+                            makes a
+                            difference.<br>
+                            2. Volunteer: Become an active participant in our initiatives by volunteering your
+                            time, skills,
+                            and expertise. Whether you're a professional, student, or passionate individual,
+                            there are
+                            opportunities for everyone to contribute.<br>
+                            3. Spread the Word: Raise awareness about our initiatives and the issues we
+                            address. Follow us
+                            on social media, share our stories, and be a vocal advocate for positive
+                            change.<br>
+                            4. Partnerships: If you represent an organization, business, or community group,
+                            explore
+                            partnership opportunities with us.
+                        </p>
+                        <!-- Sticker For NGO -->
+                        <div class="d-flex justify-content-center">
+                            <div class="sticker-head">
+                                <h3>Our Supports</h2>
+                            </div>
+                        </div>
+                        <div class="image-container-sticker">
+                            <img class="image-s" src="Images/impact-1a.png" alt="Image 1">
+                            <img class="image-s" src="Images/impact-3a.png" alt="Image 2">
+                            <img class="image-s" src="Images/impact-4a.png" alt="Image 3">
+                            <img class="image-s" src="Images/suportingngo.png" alt="Image 4">
+                            <img class="image-s" src="Images/impact-7a.png" alt="Image 5">
+                            <img class="image-s" src="Images/impact-8a.png" alt="Image 6">
+                            <img class="image-s" src="Images/impact-9a.png" alt="Image 6">
+                        </div>
+
+                        <!-- Sliding Cards -->
+                        <div class="d-flex justify-content-center">
+                            <div class="sticker-head  p22MacF">
+                                <h3>Our Working Feilds</h2>
+                            </div>
+                        </div>
+                        <div class="con">
+                            <div class="slide-container">
+                                <div class="slide-image">
+                                    <a href="vedio.html"> <img src="Images/slide1.jpg" alt=""> </a>
+                                </div>
+                                <div class="slide-image">
+                                    <a href="vedio.html"> <img src="Images/slide2.jpg" alt=""> </a>
+                                </div>
+                                <div class="slide-image">
+                                    <a href="vedio.html"> <img src="Images/slide4.jpg" alt=""> </a>
+                                </div>
+                                <div class="slide-image">
+                                    <a href="vedio.html"> <img src="Images/slide3.jpg" alt=""> </a>
+                                </div>
+                                <div class="slide-image">
+                                    <a href="vedio.html"> <img src="Images/slide5.jpg" alt=""></a>
+                                </div>
+                                <div class="slide-image">
+                                    <a href="vedio.html"> <img src="Images/slide6.webp" alt=""> </a>
+                                </div>
+                                <div class="slide-image">
+                                    <a href="vedio.html"> <img src="Images/slide7.webp" alt=""> </a>
+                                </div>
+                                <div class="slide-image">
+                                    <a href="vedio.html"></a> <img src="Images/slide8.jpg" alt=""> </a>
+                                </div>
+                                <!-- copy -->
+                                <div class="slide-image">
+                                    <img src="Images/slide1.jpg" alt="">
+                                </div>
+                                <div class="slide-image">
+                                    <img src="Images/slide2.jpg" alt="">
+                                </div>
+                                <div class="slide-image">
+                                    <img src="Images/slide4.jpg" alt="">
+                                </div>
+                                <div class="slide-image">
+                                    <img src="Images/slide3.jpg" alt="">
+                                </div>
+                                <div class="slide-image">
+                                    <img src="Images/slide5.jpg" alt="">
+                                </div>
+                                <div class="slide-image">
+                                    <img src="Images/slide6.webp" alt="">
+                                </div>
+                                <div class="slide-image">
+                                    <img src="Images/slide7.webp" alt="">
+                                </div>
+                                <div class="slide-image">
+                                    <img src="Images/slide8.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-center">
+                            <div class="sticker-head p22MacF">
+                                <h3>Product Showcase</h2>
+                            </div>
+                        </div>
+                        <!-- Cards -->
+                        <div class="wrapper">
+                            <div class="cols">
+                                <div class="col" ontouchstart="this.classList.toggle('hover');">
+                                    <div class="container">
+                                        <div class="front"
+                                            style="background-image: url(https://www.djjs.org/uploads/ag/ag_5c7f572c78cc1.jpg); ">
+
+                                            <!-- filter: brightness(120%); -->
+                                            <div class="inner">
+                                                <p class="p22MacF">Woman</p>
+                                                <span>Empowerment</span>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="back">
+                                            <div class="inner">
+                                                <p class="timesF"
+                                                    style="font-size: 1vw; color: black;">
+                                                    Women's
+                                                    empowerment means helping women
+                                                    have more control over their lives, like making decisions and having
+                                                    better
+                                                    opportunities. It's important for fairness, making our society and
+                                                    economy
+                                                    stronger, and breaking down unfair beliefs about women. When women
+                                                    are
+                                                    empowered, it's good for everyone.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="col" ontouchstart="this.classList.toggle('hover');">
+                                    <div class="container">
+                                        <div class="front"
+                                            style="background-image: url(https://static.vecteezy.com/system/resources/thumbnails/024/560/792/small/a-large-group-of-playful-school-children-smiling-generated-by-ai-photo.jpg) ; ">
+                                            <!-- filter: brightness(160%); -->
+                                            <div class="inner">
+                                                <p class="p22MacF">Childrens Health </p>
+                                                <span>Education</span>
+                                            </div>
+                                        </div>
+                                        <div class="back">
+                                            <div class="inner">
+                                                <p class="timesF"
+                                                    style="font-size: 1vw; color: black;">
+                                                    Children need to be healthy and go to
+                                                    school to learn. Being healthy means eating well, staying safe, and
+                                                    going to
+                                                    the
+                                                    doctor when needed. Going to school helps kids learn and get smart.
+                                                    When
+                                                    kids
+                                                    are healthy and educated, they can have a better future.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+                                <div class="col" ontouchstart="this.classList.toggle('hover');">
+                                    <div class="container">
+                                        <div class="front"
+                                            style="background-image: url(https://singha-r-sa.org/wp-content/uploads/2018/12/25611110_%E0%B9%91%E0%B9%98%E0%B9%91%E0%B9%91%E0%B9%91%E0%B9%92_0009.jpg) ; ">
+                                            <!-- filter: brightness(200%); -->
+                                            <div class="inner">
+                                                <p class="p22MacF">Charity Relief </p>
+                                                <span>Fund</span>
+                                            </div>
+                                        </div>
+                                        <div class="back">
+                                            <div class="inner">
+                                                <p class="timesF"
+                                                    style="font-size: 0.8vw; color: black;">A
+                                                    Charity Relief Fund is like a group
+                                                    that collects money and things to help people who are having a tough
+                                                    time.
+                                                    We
+                                                    use the money and stuff to give food, shelter, and other things to
+                                                    those who
+                                                    need it, like during disasters or when people are very poor. These
+                                                    funds
+                                                    rely on
+                                                    donations and work with others to make sure people get the help they
+                                                    need.
+                                                    They're like kind-hearted helpers who make the world a better place
+                                                    in hard
+                                                    times.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col" ontouchstart="this.classList.toggle('hover');">
+                                    <div class="container">
+                                        <div class="front"
+                                            style="background-image: url(https://tse2.mm.bing.net/th?id=OIP.QvIrLyOD42kbBGIhMnk4fwHaFb&pid=Api&P=0&h=220); ">
+                                            <!-- filter: brightness(200%); -->
+                                            <div class="inner">
+                                                <p class="p22MacF">Giving A Healthy </p>
+                                                <span>life</span>
+                                            </div>
+                                        </div>
+                                        <div class="back">
+                                            <div class="inner">
+                                                <p class="timesF"
+                                                    style="font-size: 0.9vw; color: black;">
+                                                    "Giving Healthy Life" is like a caring
+                                                    group that helps people stay healthy. We provide things like
+                                                    check-ups and
+                                                    blood
+                                                    donation camps, teach about being healthy, give food and clean
+                                                    water, and
+                                                    even
+                                                    support mental health also cancer relief funds. The group works with
+                                                    communities
+                                                    to make sure everyone can lead a healthy and happy life.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+            <!-- Footer -->
+            <footer class="container-fluid foot">
+                <div class="block-pad">
+                    <div class="row justify-content-between mb-3" id="footer-div" style="height: 18vw;">
+                        <!-- Quick Links -->
+                        <div class="my-col fit-con">
+                            <h5 class="foot-headings fit-con p22MacF">Quick Links</h5>
+                            <ul class="nav my-flex-column fit-con">
+                                <li class="fit-con"><a href="index.html" class="foot-link">Home</a></li>
+                                <li class="fit-con"><a href="./payment.html" class="foot-link">Donate</a></li>
+                                <li class="fit-con"><a href="./Complain.html" class="foot-link">Complaint</a></li>
+                                <li class="fit-con"><a href="./privacyPolicy.html" class="foot-link">Privacy
+                                        Policies</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Socials -->
+                        <div class="my-col fit-con">
+                            <h5 class="foot-headings p22MacF">Socials</h5>
+                            <ul class="nav my-flex-column fit-con">
+                                <li class="fit-con"><a href="#" class="foot-link">Twitter</a></li>
+                                <li class="fit-con"><a href="#" class="foot-link">Facebook</a></li>
+                                <li class="fit-con"><a href="#" class="foot-link">Instagram</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Contact info -->
+                        <div class="my-col fit-con">
+                            <ul class="nav my-flex-column align-items-center" style="line-height: 1.3vw;">
+                                <li class="fit-con" style="line-height: .4vw;">
+                                    <h4 class="foot-headings p22MacF" style="font-size: 1.5vw;">Address</h4>
+                                </li>
+                                <li class="fit-con address" style="line-height: 1.2vw;"><span class="foot-link"
+                                        style="font-size: 1vw;">TMSL, EM-4/1, Sector V, Saltlake.</span></li>
+                                <li class="fit-con nav-item">
+                                    <h4 class="foot-headings p22MacF" style="font-size: 1.5vw;">Mobile</h4>
+                                </li>
+                                <li class="fit-con nav-item"><a style="font-size: 1vw;"
+                                        class="foot-link cascadiaF"><em>+91-7439272165</em></a></li>
+                                <li class="fit-con nav-item">
+                                    <h4 class="foot-headings p22MacF" style="font-size: 1.5vw;">Email</h4>
+                                </li>
+                                <li class="fit-con nav-item cascadiaF"><a href="mailto:humanityfirstinitiative.org@gmail.com"
+                                        style="font-size: 1vw;"
+                                        class=" foot-link">humanityfirstinitiative.org@gmail.com</a></li>
+                                <li></li>
+                            </ul>
+                        </div>
+
+                        <!-- news letter -->
+                        <div class="col-lg" id="nsltr">
+                            <form action="Newsletter" method="post" id="nsltr-form" target="_blank">
+                                <h5 class="foot-headings no-line p22MacF">Subscribe to our newsletter</h5>
+                                <p class="foot-headings sub cascadiaF">To know upcoming events and mission updates!</p>
+                                <div id="emailSubmitted" class="d-none" style="color: green">Email Successfully
+                                    submitted!</div>
+                                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                                    <label for="newsletter1" class="visually-hidden p22MacF">Email address</label>
+                                    <input id="newsletter1" type="email" class="nslt-frm" name="email"
+                                        placeholder="Email address" required>
+                                    <button class="sub-btn" type="button"
+                                        onclick="resetAndSubmitNewsletter('nsltr-form', 'emailSubmitted')">Subscribe</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Footer-note  -->
+                    <div class="flex-column justify-content-center border-top-m pt-2">
+                        <div>
+                            <p class="foot-headings footer-note cascadiaF">© 2022 HFI Org. All rights reserved.</p>
+                        </div>
+                        <div>
+                            <ul class="list-unstyled d-flex justify-content-center mb-0">
+                                <li class="ms-3"><a class="link-dark" href="#"><img src="Images/X-logo.png"
+                                            alt="@Username" title="Twitter" style="width: 2.5vw"></a></li>
+                                <li class="ms-3"><a class="link-dark" href="#"><img src="Images/fb-logo.png"
+                                            alt="Page Name" title="Facebook" style="width: 2.5vw"></a></li>
+                                <li class="ms-3"><a class="link-dark" href="#"><img src="Images/Insta-logo.png"
+                                            alt="Page Name" title="Instagram" style="width: 2.5vw"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <!-- popup  -->
+            <div class="pop-up d-block rounded d-none" id="pop">
+                <div class="d-flex justify-content-end">
+                    <button class="close-button" onclick="closeContainer()">x</button>
+                </div>
+                <div class="wrap">
+                    <p class="text p22MacF"> How Would You Rate This NGO Website </p>
+                    <div class="emoji">
+                        <div onclick="handleEmojiClick(1)">😓</div>
+                        <div onclick="handleEmojiClick(2)">😔</div>
+                        <div onclick="handleEmojiClick(3)">🙂</div>
+                        <div onclick="handleEmojiClick(4)">😀</div>
+                        <div onclick="handleEmojiClick(5)">😍</div>
+                    </div>
+                </div>
+                <form action="FeedbackResponse" method="post" target="_blank">
+                    <div id="feedbackForm" class="d-none">
+                        <!-- Hidden input to store the selected value -->
+                        <div class="d-flex">
+                            <input type="hidden" id="selectedRating" name="rating">
+                            <textarea class="textarea timesF" name="text" cols="30" rows="3"
+                                placeholder="write your valuable opinion!!"> </textarea>
+                        </div>
+                        <div class="d-flex justify-content-end my-1">
+                            <button type="submit" onclick="closeContainer()" class="btnpop p22MacF">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="overlay" class="d-none" onclick="closeContainer()"></div>
+            <script src="js/footer.js"></script>
+            <script src="js/popup.js"></script>
+            <script>
+
+            </script>
+        </body>
+
+    </html>

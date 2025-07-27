@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HFI</title>
+      <!-- FONTS LINKS -->
+	  <link rel="stylesheet" href="./Fonts/times/stylesheet.css" type="text/css" charset="utf-8" />
+	  <link rel="stylesheet" href="./Fonts/cascadia/stylesheet.css" type="text/css" charset="utf-8" />
+	  <link rel="stylesheet" href="./Fonts/hormony/stylesheet.css" type="text/css" charset="utf-8" />
+	  <link rel="stylesheet" href="./Fonts/Sora/stylesheet.css" type="text/css" charset="utf-8" />
+	  <link rel="stylesheet" href="./Fonts/p22 mackinac/stylesheet.css" type="text/css" charset="utf-8" />
+	  <link rel="stylesheet" href="./CSS/universalFontStyle.css">
+	  <!-- ends of fonts essential links -->
+  
+    <!-- Bootsrap import CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Bootstrap Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+    <!-- Style sheet -->
+    <link rel="stylesheet" href="CSS/payment.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <!--FAVICON -->
+    <link rel="icon" href="https://www.logolynx.com/images/logolynx/af/af9677459fff9298be379a290e71434d.jpeg">
+</head>
+
+<body>
+	<!-- Header -->
+    <header class="title-bar d-flex justify-content-center align-items-center">
+        <!-- Title-bar -->
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <!-- Logo -->
+            <div style="padding-left: 1.5vw;">
+                <a href="index.html"><img title="Home"
+                        src="https://www.logolynx.com/images/logolynx/af/af9677459fff9298be379a290e71434d.jpeg"
+                        alt="Logo" class="title-logo rounded-circle"></a>
+            </div>
+            <!-- Title  -->
+            <div>
+                <h1><a class="title-link timesF" href="index.html"> HUMANITY FIRST INITIATIVE </a></h1>
+            </div>
+            <!-- title button -->
+            <span><a type="button" href="LoginA.html" id="sign-out" class="btn btn-outline-light title-btn p22MacF">Sign
+                    in</a></span>
+        </div>
+    </header>
+
+	<main>
+		<div class="card" id="container-card" style="width: 15em;">
+			<div class="d-flex justify-content-center"><b id="amount-preview"></b></div>
+			<form action="Payment" method="post" id="form1" class="d-flex row d-none">
+				<div class="col-lg">
+					<h3>BILLING ADDRESS</h3>
+					<div class="d-block h-100 px-2">
+						<label for="email" class="form-label">Email</label>
+						<input type="email" class="form-control" name="email" id="email" required>
+
+						<label for="address" class="form-label">Address</label>
+						<input type="text" class="form-control" name="address" id="address">
+
+						<label for="city" class="form-label">City</label>
+						<input type="text" class="form-control" name="city" id="city">
+						<div class="d-flex justify-content-between">
+							<div>
+								<label for="state" class="form-label">State</label>
+								<input type="text" class="form-control" name="state" id="state">
+							</div>			
+							
+							<div>
+								<label for="pin" class="form-label">Pin</label>
+								<input type="number" class="form-control" name="pin" id="pin">
+							</div>
+							<input type="hidden" id="hiddenAmount" name="amount">
+						</div>
+						<div>
+							Accepted Card <br>
+							<img src="Images/card1.png" width="100">
+							<img src="Images/card2.png" width="50">
+						</div>
+					</div>
+				</div>
+				<div class="col-lg">
+					<h3>PAYMENT</h3>
+					<div>				
+							<label for="cardnumber" class="form-label">Card Number</label>
+							<input type="number" class="form-control" name="cardnumber" id="cardnumber" required>
+							
+							<label for="expdate" class="form-label">expdate</label>
+							<input type="month" class="form-control" name="expdate" id="expdate" required>
+
+							<label for="cvv" class="form-label">CVV</label>
+							<input type="password" class="form-control" maxlength="3" minlength="3" name="cvv" id="cvv" required>
+
+							<label for="name" class="form-label">Name on Card</label>
+							<input type="text" class="form-control" name="name" id="name" required>
+
+							<input type="submit" class="submitButton" value="DONATE">
+					</div>
+				</div>
+			</form>
+
+			<!-- Set Amount -->
+			<form class="container-fluid p-4" id="amountForm">
+				<label for="amount" class="form-label">Please Set an amount: </label>
+				<input type="number" class="form-control" minlength="3" maxlength="4" id="amount" required>
+				<div class="d-flex justify-content-center pb-2"><button type="button" onclick="setAmount()" class="submitButton">Submit</button></div>
+			</form>
+		</div>
+	</main>
+	    <!-- Footer -->
+		<footer class="container-fluid foot">
+			<div class="block-pad">
+				<div class="row justify-content-between mb-3" id="footer-div">
+					<!-- Quick Links -->
+					<div class="my-col fit-con">
+						<h5 class="foot-headings fit-con p22MacF">Quick Links</h5>
+						<ul class="nav my-flex-column fit-con">
+							<li class="fit-con"><a href="index.html" class="foot-link">Home</a></li>
+							<li class="fit-con"><a href="./payment.html" class="foot-link">Donate</a></li>
+							<li class="fit-con"><a href="./Complain.html" class="foot-link">Complaint</a></li>
+							<li class="fit-con"><a href="SignUppt1A.html" class="foot-link">Join Us</a></li>
+							<li class="fit-con"><a href="./privacyPolicy.html" class="foot-link">Privacy Policies</a></li>
+						</ul>
+					</div>
+	
+					<!-- Socials -->
+					<div class="my-col fit-con">
+						<h5 class="foot-headings p22MacF">Socials</h5>
+						<ul class="nav my-flex-column fit-con">
+							<li class="fit-con"><a href="#" class="foot-link">Twitter</a></li>
+							<li class="fit-con"><a href="#" class="foot-link">Facebook</a></li>
+							<li class="fit-con"><a href="#" class="foot-link">Instagram</a></li>
+						</ul>
+					</div>
+	
+					<!-- Contact info -->
+					<div class="my-col fit-con">
+						<ul class="nav my-flex-column align-items-center" style="line-height: 1.3vw;">
+							<li class="fit-con" style="line-height: .4vw;">
+								<h4 class="foot-headings p22MacF" style="font-size: 1.5vw;">Address</h4>
+							</li>
+							<li class="fit-con address" style="line-height: 1.2vw;"><span class="foot-link"
+									style="font-size: 1vw;">TMSL, EM-4/1, Sector V, Saltlake.</span></li>
+							<li class="fit-con nav-item">
+								<h4 class="foot-headings p22MacF" style="font-size: 1.5vw;">Mobile</h4>
+							</li>
+							<li class="fit-con nav-item"><a style="font-size: 1vw;"
+									class="foot-link"><em>+91-7439272165</em></a></li>
+							<li class="fit-con nav-item">
+								<h4 class="foot-headings p22MacF" style="font-size: 1.5vw;">Email</h4>
+							</li>
+							<li class="fit-con nav-item"><a href="mailto:humanityfirstinitiative.org@gmail.com"
+									style="font-size: 1vw;"
+									class=" foot-link cascadiaF">humanityfirstinitiative.org@gmail.com</a>
+							</li>
+							<li></li>
+						</ul>
+					</div>
+	
+					<!-- news letter -->
+					<div class="col-lg" id="nsltr">
+						<form action="Newsletter" method="post" id="nsltr-form" target="_blank">
+							<h5 class="foot-headings no-line p22MacF">Subscribe to our newsletter</h5>
+							<p class="foot-headings sub">To know upcoming events and mission updates!</p>
+							<div id="emailSubmitted" class="d-none" style="color: green">Email Successfully submitted!</div>
+							<div class="d-flex flex-column flex-sm-row w-100 gap-2 mb-3">
+								<label for="newsletter1" class="visually-hidden">Email address</label>
+								<input id="newsletter1" type="email" class="nslt-frm" name="email"
+									placeholder="Email address" required>
+								<button class="sub-btn" type="button"
+									onclick="resetAndSubmitNewsletter('nsltr-form', 'emailSubmitted')">Subscribe</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<!-- Footer-note  -->
+				<div class="flex-column justify-content-center border-top-m pt-2">
+					<div>
+						<p class="foot-headings footer-note soraRegularF">© 2022 HFI Org. All rights reserved.</p>
+					</div>
+					<div>
+						<ul class="list-unstyled d-flex justify-content-center mb-0">
+							<li class="ms-3"><a class="link-dark" href="#"><img src="Images/X-logo.png" alt="@Username"
+										title="Twitter" style="width: 2.5vw"></a></li>
+							<li class="ms-3"><a class="link-dark" href="#"><img src="Images/fb-logo.png" alt="Page Name"
+										title="Facebook" style="width: 2.5vw"></a></li>
+							<li class="ms-3"><a class="link-dark" href="#"><img src="Images/Insta-logo.png" alt="Page Name"
+										title="Instagram" style="width: 2.5vw"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	
+	<script>
+		function setAmount(){
+			const amountForm = document.getElementById("amountForm");
+			var isValid = amountForm.checkValidity();
+			const amount = document.getElementById("amount");
+			if(isValid && amount.value <= 10000 && amount.value >= 100){
+				const hiddenAmount = document.getElementById("hiddenAmount");
+				const form = document.getElementById("form1");
+				const containerCard = document.getElementById("container-card");
+				const amountPreview = document.getElementById("amount-preview");
+
+				hiddenAmount.value = amount.value;
+				console.log(hiddenAmount.value);
+				amountForm.classList.add("d-none");
+				form.classList.remove("d-none");
+				containerCard.style.width = "30em";
+				amountPreview.innerText = "Donation Amount: " + amount.value;
+			}
+			else{
+				alert("Please provide a proper amount.(min 100 & max 10,000)");
+			}
+		}
+	</script>
+	<script src="js/footer.js"></script>
+</body>
+
+</html>

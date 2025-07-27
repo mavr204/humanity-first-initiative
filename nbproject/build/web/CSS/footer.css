@@ -1,0 +1,117 @@
+.title-bar{
+  background: linear-gradient(180deg, #40e6ff, #407bff);
+}
+.title-logo{
+  width: 4vw;
+  height: 4vw;
+}
+.title-link{
+  color: white;
+  text-decoration: none;
+  font-weight:100 !important;
+  font-size: 3.5vw;
+}
+.title-link:hover{
+  font-size: 3.5vw;
+  font-weight:100 !important;
+  letter-spacing: .6vw; 
+
+}
+.title-btn{
+  color: white;
+  border: 1px solid white;
+  min-width: fit-content;
+  min-height: fit-content;
+  max-width: fit-content;
+  max-height: fit-content;
+  font-size: 1.2vw;
+  padding: 1vw;
+}
+.title-btn:hover{
+  background: linear-gradient(1deg, #40e6ff, #407bff);
+  color:white;
+  font-weight: bold;
+  
+}
+/* Footer *************************************************************************************************/
+.border-top-m{
+  border-top: 1px solid #A8D8CD;
+}
+  .foot{
+    background: linear-gradient(180deg, #40e6ff, #407bff);
+    min-height: fit-content;
+  }
+  .block-pad{
+    border-top: 10px solid #018dc4;
+    padding-top: 2vw;
+    padding-bottom: 1vw;
+  }
+  .foot-headings{ 
+    color: white;
+    font-weight: 700;
+    font-size: 2vw;
+    margin-bottom: 0;
+  }
+  .foot-link{
+    color: white;
+    text-decoration: none;
+    font-size: 1.4vw;
+  }
+  .foot-link:hover{
+    color:  white;
+    font-weight: 800;
+  }
+  .fit-con{
+    max-width: fit-content;
+  }
+  .my-col{
+    padding-left: 3.4vw;
+    padding-right: 3.5vw;
+    max-height: 20vw;
+  }
+  .my-flex-column{
+    display: flex;
+    flex-direction: column;
+    line-height: 2vw;
+  }
+  .nslt-frm{
+    background: linear-gradient(90deg, #40e6ff, #407bff);
+    border: 2px solid #DDEFE3;
+    color: #DDEFE3;
+    border-radius: .8vw;
+    width: 30vw;
+    height: 3.5vw;
+  }
+  .nslt-frm:focus{
+    background-color: white;
+    border: 3px solid white;
+    color: white;
+    font-weight: 600;
+    background: linear-gradient(180deg, #40e6ff, #407bff);
+    
+  }
+  .nslt-frm::placeholder{
+    color: white;
+    font-size: 1.2vw;
+  }
+  .sub{
+    font-size: 1.2vw;
+  }
+  .sub-btn{
+    color: white;
+    border: 2px solid #DDEFE3;
+    border-radius: 1vw;
+    background: linear-gradient(180deg, #40e6ff, #407bff);
+    font-size: 1.2vw;
+    width: 6.3vw;
+    height: 3.3vw;
+  }
+  .sub-btn:hover{
+    background: linear-gradient(1deg, #40e6ff, #407bff);
+    color:white;
+    border: 2.5px solid #DDEFE3;
+    font-weight: bold;
+  }
+  .footer-note{
+    text-align: center;
+  }
